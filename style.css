@@ -47,4 +47,169 @@
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+
+.lookbook {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 200px 0;
+}
+
+.lookbookLogo {
+  position: sticky;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  z-index: 9;
+}
+
+.lookbookLogo img {
+  width: 400px;
+}
+
+.lookbookLogo p {
+  font-size: 4vw;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.bookContent {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  padding: 0 5% 10%;
+}
+
+.pagesCol {
+  width: 100%;
+  position: relative;
+}
+
+.pagesCol img {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+}
+
+.singleCard {
+  position: relative;
+}
+
+.fabricCard {
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  width: 40%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.fabricCard img {
+  height: 100px;
+  width: 100%;
+  margin: 0;
+}
+
+.fabricCard h4 {
+  text-align: center;
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+.learnMore {
+  background-color: #ffffffb4;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.learnMore p {
+  color: #062f43;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1;
+}
+
+.singleCard:hover .learnMore {
+  opacity: 1;
+  bottom: -15px;
+  right: -15px;
+}
+
+.singleCard:hover .fabricCard {
+  opacity: 1;
+  top: -40px;
+}
+
+@media screen and (max-width: 880px) {
+  .fabricCard {
+    padding: 5px;
+    width: 60%;
+  }
+  .fabricCard h4 {
+    font-size: 14px;
+  }
+  .learnMore {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .lookbookLogo img {
+    width: 150px;
+  }
+  .bookContent {
+    flex-wrap: wrap;
+  }
+  .pagesCol {
+    width: 50%;
+  }
+  .singleCard:first-child {
+    margin-top: -34vh !important;
+  }
+  .singleCard:nth-child(2) {
+    margin-top: 15vh !important;
+  }
+  .singleCard:nth-child(3) {
+    margin-top: 10vh !important;
+  }
+  .singleCard:nth-child(4) {
+    margin-top: -10vh !important;
+  }
+  .fabricCard h4 {
+    font-size: 12px;
+  }
+  .fabricCard img {
+    height: 70px;
+  }
+  .learnMore {
+    height: 60px;
+    width: 60px;
+    padding: 5px;
+  }
+  .learnMore p {
+    font-size: 12px;
+  }
+}
+
   
